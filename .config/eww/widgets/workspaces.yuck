@@ -1,0 +1,141 @@
+(deflisten ws-active
+    :initial "1"
+    `sh ~/.config/eww/scripts/active-ws.sh`
+)
+
+(deflisten ws-occupied
+    :initial ""
+    `sh ~/.config/eww/scripts/occupied-ws.sh`
+)
+
+(defwidget workspaces []
+    (box
+        :class "workspacesContainer"
+        :valign "center"
+        :halign "center"
+        :hexpand true
+        :vexpand true
+        :height 50
+        :space-evenly true
+        ;(button :class {ws == "1" ? "ws" : "workspaceButton"} :onclick "hyprctl dispatch workspace 1" "")
+        ;(button :class {ws == "2" ? "ws" : "workspaceButton"} :onclick "hyprctl dispatch workspace 2" "")
+        ;(button :class {ws == "3" ? "ws" : "workspaceButton"} :onclick "hyprctl dispatch workspace 3" "")
+        ;(button :class {ws == "4" ? "ws" : "workspaceButton"} :onclick "hyprctl dispatch workspace 4" "")
+        ;(button :class {ws == "5" ? "ws" : "workspaceButton"} :onclick "hyprctl dispatch workspace 5" "󱨍")
+        ;(button :class {ws == "6" ? "ws" : "workspaceButton"} :onclick "hyprctl dispatch workspace 6" "")
+        ;(button :class {ws == "7" ? "ws" : "workspaceButton"} :onclick "hyprctl dispatch workspace 7" "")
+        ;(button :class {ws == "8" ? "ws" : "workspaceButton"} :onclick "hyprctl dispatch workspace 8" "")
+        ;(button :class {ws == "9" ? "ws" : "workspaceButton"} :onclick "hyprctl dispatch workspace 9" "")
+        ;(button :class {ws == "10" ? "ws" : "workspaceButton"} :onclick "hyprctl dispatch workspace 10" "")
+        (button
+            :class {
+                ws-active == "1" 
+                    ? "ws-active"
+                    : (ws-occupied  =~ ".*1.*"
+                            ? "ws-occupied"
+                            : "ws")
+            }
+            :onclick "hyprctl dispatch workspace 1"
+            ""
+        )
+        (button
+            :class {
+                ws-active == "2" 
+                    ? "ws-active"
+                    : (ws-occupied  =~ ".*2.*"
+                            ? "ws-occupied"
+                            : "ws")
+            }
+            :onclick "hyprctl dispatch workspace 2"
+            ""
+        )
+        (button
+            :class {
+                ws-active == "3" 
+                    ? "ws-active"
+                    : (ws-occupied  =~ ".*3.*"
+                            ? "ws-occupied"
+                            : "ws")
+            }
+            :onclick "hyprctl dispatch workspace 3"
+            ""
+        )
+        (button
+            :class {
+                ws-active == "4" 
+                    ? "ws-active"
+                    : (ws-occupied  =~ ".*4.*"
+                            ? "ws-occupied"
+                            : "ws")
+            }
+            :onclick "hyprctl dispatch workspace 4"
+            ""
+        )
+        (button
+            :class {
+                ws-active == "5" 
+                    ? "ws-active"
+                    : (ws-occupied  =~ ".*5.*"
+                            ? "ws-occupied"
+                            : "ws")
+            }
+            :onclick "hyprctl dispatch workspace 5"
+            "󱨍"
+        )
+        (button
+            :class {
+                ws-active == "6" 
+                    ? "ws-active"
+                    : (ws-occupied  =~ ".*6.*"
+                            ? "ws-occupied"
+                            : "ws")
+            }
+            :onclick "hyprctl dispatch workspace 6"
+            ""
+        )
+        (button
+            :class {
+                ws-active == "7" 
+                    ? "ws-active"
+                    : (ws-occupied  =~ ".*7.*"
+                            ? "ws-occupied"
+                            : "ws")
+            }
+            :onclick "hyprctl dispatch workspace 7"
+            ""
+        )
+        (button
+            :class {
+                ws-active == "8" 
+                    ? "ws-active"
+                    : (ws-occupied  =~ ".*8.*"
+                            ? "ws-occupied"
+                            : "ws")
+            }
+            :onclick "hyprctl dispatch workspace 8"
+            ""
+        )
+        (button
+            :class {
+                ws-active == "9" 
+                    ? "ws-active"
+                    : (ws-occupied  =~ ".*9.*"
+                            ? "ws-occupied"
+                            : "ws")
+            }
+            :onclick "hyprctl dispatch workspace 9"
+            ""
+        )
+        (button
+            :class {
+                ws-active == "10" 
+                    ? "ws-active"
+                    : (ws-occupied  =~ ".*10.*"
+                            ? "ws-occupied"
+                            : "ws")
+            }
+            :onclick "hyprctl dispatch workspace 10"
+            ""
+        )
+    )
+)

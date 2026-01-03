@@ -1,0 +1,57 @@
+amber_forest.png: nature amber warm
+anime_girl1.png: anime
+astronaut.png: cosmic
+aurora_christmas.png: aurora snow cold
+aurora_lake.png: nature aurora cold
+black_waves.png: noir
+blossom.png: noir japan
+blue_forest.png: cold snow nature
+bridge.png: warm nature amber
+cherry_blossom_cave.png: nature water
+cherry_blossoms.png: nature japan
+christmas_cottage.png: nature snow rural warm
+cold_forest.png: nature snow cold
+dark_frozen_forest.png: nature snow cold
+eclipse_lake.png: nature water cold
+fallen.png: nature fantasy
+fantasy_amber_tree.png: nature amber fantasy warm
+fantasy_mountains.png: nature warm fantasy
+ferryman.png: cosmic water aurora
+fire_watch.png: nature rural cold
+fishing_village.png: rural warm water
+flying_whale.png: fantasy
+forest_respite.png: nature
+forest_view.png: nature
+frozen_lake_sunset.png: nature snow warm water
+frozen_river.png: nature snow warm water
+hypr_girl.png: anime
+japan_sunset_lake.png: japan nature water warm
+lakeside_forest.png: nature snow cold
+live_swamp.png: nature water
+lonesome_cottage.png: nature rural snow
+lonesome_samurai.png: nature japan warm amber
+milkyway_mountain.png: nature snow cosmic
+mountain_lake.png: nature warm water
+noir_sky.png: noir
+orange_taiga.png: nature snow warm water
+pirate_ship.png: water
+portal.png: fantasy
+rafter_girl.png: water amber warm rural
+river_aurora.png: aurora nature
+riverside_camp.png: nature snow cold
+shadow_samurai.png:
+snow_arch.png: snow rural nature warm
+snow_forest_cottage_3d.png: snow nature rural cold
+snowy_village_night.png: snow rural warm
+soul_of_cinder.png: fantasy
+stellar_tree.png: aurora
+sukuna_gojo.png: anime
+sunset_cottage.png: warm rural nature
+super_moon.png: nature cold
+temple_walkway.png: nature rural warm amber
+tower_sakura_fuji.png: nature warm
+tree_waterfall_mountains.png: nature water
+urban_aurora.png: aurora
+violet_aurora.png: nature aurora
+volcanic_blossom.png: nature warm
+water_pot.png: rural warm

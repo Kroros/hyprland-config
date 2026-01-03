@@ -1,0 +1,14 @@
+(defpoll connection
+        :interval "5s"
+        "ping -c1 -W1 1.1.1.1 >/dev/null && echo online || echo offline"
+)
+
+(defwidget net-status []
+    (eventbox :class "netContainer"
+        (box :class {connection == "online" ? "netStatus-online" : "netStatus-offline"}
+            (label
+                :text {connection == "online" ? "󰞉" : "󱞐"}
+            )
+        )
+    )
+)

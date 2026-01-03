@@ -1,0 +1,15 @@
+{
+    "nature": {
+        "bg": "#222722",
+        "fg": "#c7c7c7",
+        "bg-alt": "#3E5D49",
+        "waybar-primary": "#b3d376",
+        "waybar-secondary": "#8abeb7",
+        "waybar-bg-img": "",
+        "active-border-1": "rgba(45cd45ee)",
+        "active-border-2": "rgba(c0d550ee)",
+        "inactive-border-1": "rgba(eabe87ee)",
+        "inactive-border-2": "rgba(dadadaee)",
+        "doom-theme": "doom-spring"
+    }
+}

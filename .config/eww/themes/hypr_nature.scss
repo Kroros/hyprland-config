@@ -1,0 +1,154 @@
+$background: rgba(34, 39, 34, 0.85);
+$background_alt: rgba(62, 93, 73, 0.85);
+$foreground: #c7c7c7;
+$widget_bg: rgba(0,0,0,0);
+$primary: #b3d376;
+$secondary: #8abeb7;
+$tertiary: #678977;
+$alert: #a54242 ;
+$disabled: #324032;
+
+
+* {
+    all: unset;
+    font-family: "Weather Icons","Hurmit Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    color: $foreground;
+}
+
+button {
+    all: unset;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.centerbar, .rightbar {
+    background-color: $background;
+    border-radius: 25px;
+}
+
+.container {
+    background-color: transparent;
+}
+
+.datetime {
+    background-color: $widget_bg;
+    color: $primary;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+.datetime label {
+    font-size: 15px;
+    color: $primary;
+}
+.date label {
+    padding-bottom: 0px;
+}
+.time {
+    padding-top : 0px;
+}
+
+.spotifyContainer {
+    color: $primary;
+    background-color: $widget_bg;
+}
+.spotify {
+    margin-left: 20px;
+    padding: 0px;
+}
+.spotify button {
+    all: unset;
+}
+.songInfo {
+    margin-left: 7px;
+}
+.trackTitle {
+    padding-right: 0px;
+}
+.trackArtist {
+    padding-right: 0px;
+}
+.trackTitle label {
+    font-size: 16px;
+    color: $primary;
+}
+.trackArtist label {
+    color: $primary;
+    font-size: 14px;
+}
+.circProgress {
+    color: $primary;
+    margin-left: 0px;
+}
+.circProgressBg {
+    color: #878787;
+    margin-left: 0px;
+}
+.playing {
+    padding-left: 4px;
+}
+.paused {
+    padding-left: 2px;
+}
+.playing label, .paused label {
+    color: $primary;
+    font-size: 23px;
+}
+
+
+.netContainer {
+    background-color: $widget_bg;
+}
+.netStatus-online, .netStatus-offline {
+    padding-left: 15px;
+    padding-right: 18px;
+    margin-left: 10px;
+}
+.netStatus-online {
+    background-color: $background_alt;
+}
+.netStatus-offline {
+    background-color: $alert;
+}
+
+.workspacesContainer {
+    background-color: $widget_bg;
+}
+.ws, .ws-active, .ws-occupied {
+    padding: 0px 20px 0px 13px;
+    margin: 0px 2px 0px 2px;
+}
+.ws:hover, .ws-occupied:hover {
+    background-color: $background_alt;
+    box-shadow: inset 0 -3px $primary;
+}
+.ws label, .ws-active label, .ws-occupied label {
+    font-size: 20px;
+}
+.ws-active {
+    background-color: $background_alt;
+    box-shadow: inset 0 -3px $secondary;
+}
+.ws-occupied {
+    background-color: $disabled;
+    box-shadow: inset 0 -3px $tertiary;
+}
+
+.weather {
+    background-color: $widget_bg;
+}
+
+
+.cpuContainer {
+    margin: 0px 7px 0px 25px; 
+}
+.cpuContainer label {
+    color: $primary;
+}
+
+.calendar {
+    background-color: $background_alt;
+}

@@ -1,0 +1,5 @@
+(defwidget cpu []
+    (box :class "cpuContainer"
+        {" " + round(EWW_CPU.avg, 0) + "%"}
+    )
+)

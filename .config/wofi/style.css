@@ -1,0 +1,61 @@
+@define-color background rgba(34, 39, 34, 0.85);
+@define-color background_alt rgba(62, 93, 73, 0.85);
+@define-color foreground #c7c7c7;
+@define-color primary #b3d376;
+@define-color secondary #8abeb7;
+@define-color alert #a54242;
+@define-color disabled #707880;
+@define-color border #45cd45;
+@define-color border_alt #c0d550;
+
+
+* {
+    font-family: "Hurmit Nerd Font";
+    font-size: 14px;
+}
+
+
+#window {
+    color: @foreground;
+    background-color: transparent;
+    padding: 5px;
+}
+
+#outer-box {
+    padding: 5px;
+    background-color: transparent;
+}
+
+#input {
+    background-color: @background;
+    border: 2px solid @border;
+    border-radius: 25px;
+    margin-bottom: 1px;
+    opacity: 1;
+}
+
+#scroll {
+    border: 2px solid @border;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 5px;
+    background-color: @background;
+}
+
+#inner-box {
+    border-radius: 10px;
+    opacity: 1;
+    background-color: transparent;
+    padding: 5px;
+
+}
+
+#entry {
+    border-radius: 10px;
+    border: 0px solid @border_alt;
+    margin: 1px;
+}
+
+#entry:selected {
+    background-color: @background_alt;
+}

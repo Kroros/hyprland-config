@@ -1,0 +1,12 @@
+(defpoll weather 
+    :interval "600s"
+    :initial ""
+    `python scripts/weather.py`
+)
+
+(defwidget weather []
+    (box :class "weather"
+            :halign "end"
+            weather
+    )
+)
