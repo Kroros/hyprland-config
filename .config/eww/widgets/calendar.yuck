@@ -1,0 +1,38 @@
+(defwidget dateCalendar []
+           (box
+                :class "calendar"
+                :orientation "v"
+                :space-evenly false
+
+                (box
+                    :orientation "v"
+                    :space-evenly false
+
+                    (label
+                        :class "calendarClock"
+                        :text {formattime(EWW_TIME, "%H:%M:%S")}
+                    )
+
+                    (label
+                        :class "calendarDate"
+                        :text {formattime(EWW_TIME, "%d %B %Y")}
+                    )
+                )
+
+                (box
+                    :space-evenly false
+                    :class "calendarBox"
+                    :halign "center"
+
+                    (calendar
+                        :show-heading false
+                        :show-details true
+                        :show-day-names true
+                        :show-week-numbers true
+                        :day {formattime(EWW_TIME, "%d")}
+                        :month {formattime(EWW_TIME, "%m")}
+                        :year {formattime(EWW_TIME, "%Y")}
+                    )
+                )
+           )
+)

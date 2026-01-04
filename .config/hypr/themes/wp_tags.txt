@@ -4,11 +4,11 @@ astronaut.png: cosmic
 aurora_christmas.png: aurora snow cold
 aurora_lake.png: nature aurora cold
 black_waves.png: noir
-blossom.png: noir japan
+blossom.png: noir
 blue_forest.png: cold snow nature
 bridge.png: warm nature amber
 cherry_blossom_cave.png: nature water
-cherry_blossoms.png: nature japan
+cherry_blossoms.png: nature
 christmas_cottage.png: nature snow rural warm
 cold_forest.png: nature snow cold
 dark_frozen_forest.png: nature snow cold
@@ -25,11 +25,11 @@ forest_view.png: nature
 frozen_lake_sunset.png: nature snow warm water
 frozen_river.png: nature snow warm water
 hypr_girl.png: anime
-japan_sunset_lake.png: japan nature water warm
+japan_sunset_lake.png: nature water warm
 lakeside_forest.png: nature snow cold
 live_swamp.png: nature water
 lonesome_cottage.png: nature rural snow
-lonesome_samurai.png: nature japan warm amber
+lonesome_samurai.png: nature warm amber
 milkyway_mountain.png: nature snow cosmic
 mountain_lake.png: nature warm water
 noir_sky.png: noir

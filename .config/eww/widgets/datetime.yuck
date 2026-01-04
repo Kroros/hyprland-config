@@ -26,7 +26,7 @@
 (defwidget datetime [output]
     
     (eventbox
-            :onclick `eww open calendar --screen ${output}`
+            :onclick `eww open calendarWindow --screen ${output}`
             ;;:onclick `notify-send ${output}`
             :cursor "pointer"
 

@@ -4,6 +4,7 @@
 (include "./widgets/workspaces.yuck")
 (include "./widgets/net-status.yuck")
 (include "./widgets/cpu.yuck")
+(include "./widgets/calendar.yuck")
 
 ;; TODO
 ;; Calendar widget
@@ -133,9 +134,12 @@
         )
 )
 
-(defwindow calendar []
-    :class calendar
-    :geometry (geometry :x "00%"
+
+
+
+
+(defwindow calendarWindow []
+    :geometry (geometry :x "1%"
                         :y "0px"
                         :width "20%"
                         :height "30%"
@@ -143,11 +147,11 @@
     :stacking "fg"
     :exclusive false
     :focusable false
-    :namespace "calendar"
 
     ;; Content goes here
        (eventbox
-            :onhoverlost "eww close calendar"
-            "hiiiii"
-       )
+            :onhoverlost "eww close calendarWindow"
+
+            (dateCalendar)
+        )
 )
