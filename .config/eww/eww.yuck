@@ -5,6 +5,9 @@
 (include "./widgets/net-status.yuck")
 (include "./widgets/cpu.yuck")
 (include "./widgets/calendar.yuck")
+(include "./widgets/spotify-player.yuck")
+
+(include "./state_variables.yuck")
 
 ;; TODO
 ;; Calendar widget
@@ -19,7 +22,7 @@
             :orientation "h"
             :space-evenly false
 
-        (spotify)
+        (spotify :output 1)
     )
 )
 
@@ -81,7 +84,7 @@
             :orientation "h"
             :space-evenly false
 
-        (spotify)
+        (spotify :output 0)
     )
 )
 
@@ -136,11 +139,10 @@
 
 
 
-
-
 (defwindow calendarWindow []
+    :class "eww-calendar"
     :geometry (geometry :x "1%"
-                        :y "0px"
+                        :y "20px"
                         :width "20%"
                         :height "30%"
                         :anchor "top right")
@@ -149,9 +151,30 @@
     :focusable false
 
     ;; Content goes here
-       (eventbox
-            :onhoverlost "eww close calendarWindow"
+    (eventbox
+        :onhoverlost "eww close calendarWindow"
+        (dateCalendar)
+    )
+)
 
-            (dateCalendar)
-        )
+
+
+(defwindow spotify-player []
+    :class "eww-player"
+    :geometry (geometry :x "1%"
+                        :y "20px"
+                        :width "00%"
+                        :height "40%"
+                        :anchor "top left"
+              )
+    :stacking "fg"
+    :exlcusive false
+    :focusable false
+
+    ;; Content goes here
+    (eventbox
+        :onhoverlost "eww close spotify-player"
+
+        (spotify-player)
+    )
 )

@@ -1,0 +1,35 @@
+(deflisten title
+    :initial "Nothing currently playing"
+    `playerctl --follow metadata --format {{title}} --player spotify`
+)
+
+(deflisten artist
+    :initial ""
+    `playerctl --follow metadata --format {{artist}} --player spotify`
+)
+
+(deflisten length
+    :initial 1
+    `playerctl --follow metadata mpris:length --player spotify`
+)
+
+(deflisten status
+    :initial "Paused"
+    `playerctl --follow status -p spotify`
+)
+
+(defpoll position
+    :interval "1s"
+    :initial 0
+    `playerctl position --player spotify`
+)
+
+(deflisten artUrl
+    :initial ""
+    `playerctl --follow metadata mpris:artUrl`
+)
+
+(deflisten artPath
+    :inital ""
+    `sh ~/.config/eww/scripts/spotify-art.sh`
+)

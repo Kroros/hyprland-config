@@ -20,11 +20,11 @@
             :halign "end"
             :valign "start"
             :class "time"
-            time)
+            time
+    )
 )
 
 (defwidget datetime [output]
-    
     (eventbox
             :onclick `eww open calendarWindow --screen ${output}`
             ;;:onclick `notify-send ${output}`

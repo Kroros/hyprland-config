@@ -1,0 +1,70 @@
+(defwidget spotify-player []
+    (box
+        :class "playerContainer"
+        :orientation "v"
+        :space-evenly false
+
+        ;; Album Art
+        (image :path artPath
+               :image-width "350"
+               :class "albumArt"
+        )
+
+        ;; Track title and artist name
+        (box
+             :class "songDetails"
+             :orientation "v"
+             :halign "center"
+
+             (label :class "playerTitle" :text title)
+             (label :class "playerArtist" :text artist)
+        )
+
+        ;; Controles
+        (box :class "playerControles"
+             :orientation "v"
+             :space-evenly false
+             :hexpand true
+
+             ;; Progress bar row
+             (box :class "progressBarContainer"
+                  :space-evenly false
+                  :orientation "h"
+                  :hexpand true
+
+                  (label :class "playerTime" :text "00:00" )
+                  (scale :class "progressBar"
+                       :value {round(position / (length / 1000000) * 100,1)}
+                       :hexpand true
+                       :min 0
+                       :max length
+                  )
+
+                  (label :class "playerTime" :text {formattime(length, "%M:%S")})
+
+             )
+
+             ;; Media Controles
+             (box :class "baseControlesContainer"
+                  :halign "center"
+                  :orientation "h"
+                  "fgdfg"
+             )
+
+             ;; Volume + shuffel/repeat
+             (box :class "spotifyControlesContainer"
+                  :space-evenly false
+                  :halign "center"
+
+                  (scale :class "volume"
+                         :min 0
+                         :max 1
+                         :value 50
+                         :marks "|"
+                         :hexpand true
+                  )
+                  "fgdfg"
+             )
+        )
+    )
+)
