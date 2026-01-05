@@ -13,6 +13,15 @@
     `playerctl --follow metadata mpris:length --player spotify`
 )
 
+(deflisten formattedLength
+    :initial "00:00"
+    `playerctl --follow metadata mpris:length -p spotify |
+     awk '{
+         printf "%d:%02d\\n", ($1/1000000)/60, ($1/1000000)%60;
+         fflush();
+     }'`
+)
+
 (deflisten status
     :initial "Paused"
     `playerctl --follow status -p spotify`
@@ -22,6 +31,12 @@
     :interval "1s"
     :initial 0
     `playerctl position --player spotify`
+)
+
+(defpoll formattedPosition
+    :interval "1s"
+    :initial "00:00"
+    `playerctl position --player spotify | awk '{printf "%d:%02d", $1/60, $1%60}'`
 )
 
 (deflisten artUrl

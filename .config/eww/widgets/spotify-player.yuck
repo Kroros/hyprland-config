@@ -32,15 +32,15 @@
                   :orientation "h"
                   :hexpand true
 
-                  (label :class "playerTime" :text "00:00" )
+                  (label :class "playerTime" :text formattedPosition)
                   (scale :class "progressBar"
-                       :value {round(position / (length / 1000000) * 100,1)}
+                       :value {round(position / (length / 1000000),1)}
                        :hexpand true
                        :min 0
-                       :max length
+                       :max 100
                   )
 
-                  (label :class "playerTime" :text {formattime(length, "%M:%S")})
+                  (label :class "playerTime" :text formattedLength)
 
              )
 
