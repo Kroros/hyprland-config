@@ -10,7 +10,6 @@
 (include "./state_variables.yuck")
 
 ;; TODO
-;; Calendar widget
 ;; Spotify widget
 ;; Power widget
 ;; Audio widget

@@ -1,3 +1,5 @@
+(defvar slider_pos 0)
+
 (defwidget spotify-player []
     (box
         :class "playerContainer"
@@ -34,10 +36,11 @@
 
                   (label :class "playerTime" :text formattedPosition)
                   (scale :class "progressBar"
-                       :value {round(position / (length / 1000000),1)}
+                       :value position
+                       :onchange ``
                        :hexpand true
                        :min 0
-                       :max 100
+                       :max {length/1000000}
                   )
 
                   (label :class "playerTime" :text formattedLength)
