@@ -8,7 +8,7 @@
 
         ;; Album Art
         (image :path artPath
-               :image-width "350"
+               :image-width 350
                :class "albumArt"
         )
 
@@ -37,7 +37,7 @@
                   (label :class "playerTime" :text formattedPosition)
                   (scale :class "progressBar"
                        :value position
-                       :onchange ``
+                       :onchange `notify-send {value}`
                        :hexpand true
                        :min 0
                        :max {length/1000000}
@@ -51,22 +51,58 @@
              (box :class "baseControlesContainer"
                   :halign "center"
                   :orientation "h"
-                  "fgdfg"
-             )
+                  :spacing 10
 
-             ;; Volume + shuffel/repeat
+                  (eventbox
+                    :class {shuffleStat == "On" ? "shuf-rep-active" : "shuf-rep-inactive"}
+                    :cursor "pointer"
+                    :vexpand false
+                    :onclick `playerctl shuffle Toggle -p spotify`
+                    "󰒟")
+
+                  (eventbox
+                    :class "prev-next"
+                    :cursor "pointer"
+                    :vexpand false
+                    :onclick "playerctl previous -p spotify"
+                    "󰒮")
+
+                  (eventbox
+                    :class "play-pause"
+                    :cursor "pointer"
+                    :vexpand false
+                    :onclick `playerctl play-pause -p spotify`
+                    {status == "Paused" ? "󰐊" : "󰏤"})
+
+                  (eventbox
+                    :class "prev-next"
+                    :cursor "pointer"
+                    :vexpand false
+                    :onclick `playerctl next -p spotify`
+                    "󰒭")
+
+                  (eventbox
+                    :class {loopStat != "None" ? "shuf-rep-active" : "shuf-rep-inactive"}
+                    :cursor "pointer"
+                    :vexpand false
+                    :onclick `playerctl loop ${loopStat == "Playlist" ? "Track" : "Playlist"} -p spotify`
+                    {loopStat == "Track" ? "󰑘" : "󰑖"})
+                  )
+                  ;;{loopStat == "Track" ? "None" : "Playlist"}
+
+             ;; Volume and player
              (box :class "spotifyControlesContainer"
                   :space-evenly false
                   :halign "center"
 
-                  (scale :class "volume"
+
+                  (scale :class "volumeSlider"
                          :min 0
-                         :max 1
+                         :max 100
                          :value 50
-                         :marks "|"
                          :hexpand true
                   )
-                  "fgdfg"
+
              )
         )
     )

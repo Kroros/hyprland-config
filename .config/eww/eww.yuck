@@ -136,6 +136,32 @@
         )
 )
 
+(defwindow leftbar
+    :class taskbar
+    :monitor 2
+    :geometry (geometry :x "0%"
+                        :y "20px"
+                        :width "98%"
+                        :height "50px"
+                        :anchor "top center")
+    :stacking "fg"
+    :exclusive true
+    :focusable false
+    :namespace "left_bar"
+
+    ;;Content goes here
+        (centerbox :class "container"
+                :halign "fill"
+                :orientation "horizontal"
+
+                (rLeft-modules)
+
+               (rCenter-modules)
+
+                (rRight-modules :output 2)
+        )
+)
+
 
 
 (defwindow calendarWindow []
@@ -162,8 +188,6 @@
     :class "eww-player"
     :geometry (geometry :x "1%"
                         :y "20px"
-                        :width "00%"
-                        :height "40%"
                         :anchor "top left"
               )
     :stacking "fg"

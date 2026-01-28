@@ -26,7 +26,7 @@ button {
     box-shadow: none;
 }
 
-.centerbar, .rightbar {
+.centerbar, .leftbar, .rightbar {
     background-color: $background;
     border-radius: 10px;
 }
@@ -202,7 +202,9 @@ calendar:indeterminate {
 
 
 
-
+.spotify-player {
+    border-radius: 10px;
+}
 .playerContainer {
     background-color: $background;
     border-radius: 10px;
@@ -236,5 +238,34 @@ calendar:indeterminate {
 }
 .playerTime {
     font-size: 18px;
+    color: $primary;
+}
+.volumeSlider {
+    min-width: 150px;
+}
+.shuf-rep-active, .prev-next, .play-pause {
+    border: 1px solid $primary;
+    border-radius: 50%;
+}
+.shuf-rep-active label {
+    font-size: 20px;
+    color: $primary;
+    margin: 0px 12px 0px 9px;
+}
+.shuf-rep-inactive {
+    border: 1px solid $foreground;
+    border-radius: 50%;
+}
+.shuf-rep-inactive label {
+    font-size: 25px;
+    color: $foreground;
+    margin: 0px 12px 0px 9px;
+}
+.prev-next label {
+    font-size: 35px;
+    color: $primary;
+}
+.play-pause label {
+    font-size: 45px;
     color: $primary;
 }

@@ -59,9 +59,14 @@
             :spacing 0
             :hexpand false
             :space-evenly false
-        (eventbox :onclick 'eww open spotify-player --screen ${output}'
+        (eventbox
+                        :onclick 'eww open spotify-player --screen ${output}'
+                        ;;:onrightclick `playerctl play-pause -p spotify`
+                        :onrightclick `notify-send "hello"`
                         :class "spotifyButton"
                         :cursor "pointer"
+
+
             (box :class "spotify"
                 :orientation "horizontal"
                 :halign "start"

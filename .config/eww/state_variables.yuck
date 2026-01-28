@@ -41,10 +41,20 @@
 
 (deflisten artUrl
     :initial ""
-    `playerctl --follow metadata mpris:artUrl`
+    `playerctl --follow metadata mpris:artUrl --player spotify`
 )
 
 (deflisten artPath
-    :inital ""
+    :initial ""
     `sh ~/.config/eww/scripts/spotify-art.sh`
+)
+
+(deflisten shuffleStat
+    :initial "On"
+    `playerctl --follow shuffle --player spotify`
+)
+
+(deflisten loopStat
+    :initial "Playlist"
+    `playerctl --follow loop --player spotify`
 )
