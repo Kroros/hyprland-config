@@ -6,6 +6,8 @@ import "../widgets"
 RowLayout {
     Layout.alignment: Qt.AlignRight
     WeatherWidget {}
+    PackagesWidget {}
+    CpuWidget {}
     NetworkWidget {}
     DateTimeWidget {}
 }
