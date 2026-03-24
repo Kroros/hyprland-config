@@ -26,12 +26,12 @@ Singleton {
                   root.player,
                   "metadata",
                   "--format",
-                  "{{title}},{{artist}},{{album}},{{mpris:length}}"];
+                  "{{title}};{{artist}};{{album}};{{mpris:length}}"];
         running: true;
 
         stdout: SplitParser {
             onRead: data => {
-                var info = data.split(",");
+                var info = data.split(";");
                 root.title = info[0];
                 root.artist = info[1];
                 root.album = info[2];

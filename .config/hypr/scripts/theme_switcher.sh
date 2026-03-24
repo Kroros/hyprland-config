@@ -6,13 +6,16 @@ echo $1 > $HOME/.cache/hypr_current_theme
 
 WALLPAPER1=$(grep -w ".*$1.*" $HOME/.config/hypr/themes/wp_tags.txt | cut -d: -f1 | shuf -n 1)
 WALLPAPER2=$(grep -w ".*$1.*" $HOME/.config/hypr/themes/wp_tags.txt | cut -d: -f1 | shuf -n 1)
+WALLPAPER3=$(grep -w ".*$1.*" $HOME/.config/hypr/themes/wp_tags.txt | cut -d: -f1 | shuf -n 1)
 
 WP_PATH1="${WALLPAPER_DIR}${WALLPAPER1}"
 WP_PATH2="${WALLPAPER_DIR}${WALLPAPER2}"
+WP_PATH3="${WALLPAPER_DIR}${WALLPAPER3}"
 
 
 awww img $WP_PATH1 -o DP-1 --transition-type wipe
 awww img $WP_PATH2 -o HDMI-A-1 --transition-type wipe
+awww img $WP_PATH3 -o DP-2 --transition-type wipe
 
 #Theme switching strategy:
 #  For each theme, make a hypr config file, e.g /themes/hypr_nature.conf

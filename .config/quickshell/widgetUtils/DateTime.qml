@@ -13,6 +13,9 @@ Singleton {
     readonly property string time: {
         Qt.formatDateTime(time.date, "HH:mm")
     }
+    readonly property string fullDate: {
+        Qt.formatDateTime(time.date, "MMMM yyyy")
+    }
 
     SystemClock {
         id: time

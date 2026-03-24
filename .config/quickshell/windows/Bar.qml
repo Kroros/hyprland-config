@@ -49,21 +49,11 @@ Scope {
                     id: barRow
                     anchors.fill: parent
 
-                    //LeftBarWidgets{}
-                    //CenterBarWidgets{}
-                    //RightBarWidgets{}
-
                     RowLayout {
                         id: leftBarWidgets;
                         Layout.alignment: Qt.AlignLeft;
 
                         MPlayerWidget {}
-
-                        //CircProg {
-                        //    value: 1.0;
-                        //    size: 50;
-                        //    strokeWidth: 5;
-                        //}
                     }
 
                     RowLayout {

@@ -8,6 +8,7 @@ Item {
     readonly property color backgroundAlt: Qt.rgba(0.24, 0.36, 0.29, 0.85);
     readonly property color widgetBg: Qt.rgba(0,0,0,0);
     readonly property color foreground: Qt.rgba(0.78, 0.78, 0.78, 1);
+    readonly property color foregroundDark: Qt.rgba(0.18, 0.18, 0.18, 1);
     readonly property color primary: Qt.rgba(0.7, 0.83, 0.46, 1);
     readonly property color secondary: Qt.rgba(0.54, 0.75, 0.72, 1);
     readonly property color tertiary: Qt.rgba(0.40, 0.54, 0.47, 1);

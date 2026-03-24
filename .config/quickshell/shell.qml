@@ -9,6 +9,7 @@ import Quickshell
 // Powermenu
 // Launcher
 // Screenlock
-Scope {
+
+ShellRoot {
     Bar {}
 }

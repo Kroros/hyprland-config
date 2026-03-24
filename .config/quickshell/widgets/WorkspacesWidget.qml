@@ -57,7 +57,10 @@ RowLayout {
                 anchors.fill: parent;
 
                 hoverEnabled: true;
-                onEntered: wsButton.hovered = true;
+                onEntered: {
+                    console.log(Hyprland.workspaces.values.map(ws => ws.name));
+                    wsButton.hovered = true;
+                }
                 onExited: wsButton.hovered = false;
 
                 onClicked: {
