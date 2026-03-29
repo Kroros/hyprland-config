@@ -7,9 +7,9 @@ Rectangle {
     implicitWidth: 65;
     implicitHeight: 50;
 
-    color: Packages.updates < 100
+    color: Packages.updates < 250
         ? Colours.backgroundAlt
-        : Packages.updates < 200
+        : Packages.updates < 500
             ? Colours.warn
             : Colours.alert;
 

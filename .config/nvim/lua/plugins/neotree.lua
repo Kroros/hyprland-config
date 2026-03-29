@@ -9,53 +9,42 @@ return {
 	lazy = false, -- neo-tree will lazily load itself
 	---@module 'neo-tree'
 	---@type neotree.Config
-	opts = {},
+	opts = {
+		close_if_last_window = true,
+		enable_git_status = true,
+		enable_diagnostics = true,
+		sort_case_insensitive = true,
+		name = {
+			use_git_status_colors = true,
+		},
 
-	config = function()
-		require("neo-tree").setup({
-			close_if_last_window = true,
-			enable_git_status = true,
-			enable_diagnostics = true,
-			sort_case_insensitive = true,
-			name = {
-				use_git_status_colors = true,
+		git_status = {
+			symbols = {
+				-- Change type
+				added = "✚", -- or "✚"
+				modified = "", -- or ""
+				deleted = "✖", -- this can only be used in the git_status source
+				renamed = "󰁕", -- this can only be used in the git_status source
+				-- Status type
+				untracked = "",
+				ignored = "",
+				unstaged = "󰄱",
+				staged = "",
+				conflict = "",
 			},
+		},
 
-			git_status = {
-				symbols = {
-					-- Change type
-					added = "", -- or "✚"
-					modified = "", -- or ""
-					deleted = "✖", -- this can only be used in the git_status source
-					renamed = "󰁕", -- this can only be used in the git_status source
-					-- Status type
-					untracked = "",
-					ignored = "",
-					unstaged = "󰄱",
-					staged = "",
-					conflict = "",
-				},
+		filesystem = {
+			filtered_items = {
+				visible = true,
+				hide_dotfiles = false,
+				hide_gitignored = false,
+				hide_ignored = false,
 			},
+		},
 
-			mappings = {
-				["l"] = "open",
-				["<CR>"] = "open",
-				["S"] = "open_split",
-				["s"] = "open_vsplit",
-				["a"] = {
-					"add",
-					config = {
-						show_path = "none",
-					},
-				},
-				["A"] = "add_directory",
-				["d"] = "delete",
-				["r"] = "rename",
-			},
-
-			filesystem = {
-				filtered_items = { hide_dotfile = false, hide_gitingored = false, hide_ignored = false },
-			},
-		})
-	end,
+		mappings = {
+			["l"] = "open",
+		},
+	},
 }
